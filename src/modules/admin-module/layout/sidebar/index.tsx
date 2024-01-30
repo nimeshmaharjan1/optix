@@ -14,21 +14,21 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
-import { navList, navListType } from './nav';
-import { Navbar } from './nav-links';
+import { Navbar } from './sidebar-nav';
+import { navList, navListType } from './sidebar-nav-list';
 
 interface MailProps {
   list: navListType[];
 }
 
 export const Sidebar = ({ list }: MailProps) => {
-  const [isCollapsed, setIsCollapsed] = React.useState(false);
+  const [isCollapsed, setIsCollapsed] = React.useState(true);
 
   return (
     <TooltipProvider delayDuration={0}>
       <div
         className={cn(
-          'py-6 px-4 flex flex-col gap-6 border-r border-border-layout h-[calc(100vh-80px)] overflow-hidden relative',
+          'py-6 px-4 flex flex-col gap-6 border-r border-border-layout h-[calc(100vh-75px)] overflow-hidden relative',
           isCollapsed &&
             'min-w-[50px] max-w-[50px] transition-all duration-300 ease-in-out gap-0',
           !isCollapsed &&
@@ -37,8 +37,8 @@ export const Sidebar = ({ list }: MailProps) => {
       >
         <div
           className={cn(
-            'flex h-[52px]  items-center justify-center',
-            isCollapsed ? 'h-[52px]' : ''
+            'flex items-center justify-center',
+            isCollapsed ? 'h-14' : ''
           )}
         >
           <NavSearch

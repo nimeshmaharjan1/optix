@@ -4,12 +4,13 @@
 
 import { Icon } from '@/components/shared/icon';
 import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from '@radix-ui/react-tooltip';
+} from '@/components/ui/tooltip';
+import { cn } from '@/lib/utils';
+
 import * as icons from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -55,7 +56,7 @@ export const Navbar = ({ links, isCollapsed }: NavProps) => {
               </TooltipTrigger>
               <TooltipContent
                 side="right"
-                className="flex pl-4 items-center gap-4"
+                className="flex ml-3 mb-1 items-center gap-4"
               >
                 {link.title}
                 {link.add && (

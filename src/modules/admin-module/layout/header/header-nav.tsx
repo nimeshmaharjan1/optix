@@ -1,7 +1,3 @@
-'use client';
-import Logo from '@/components/shared/logo';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,37 +8,11 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
-import { Bell } from 'lucide-react';
 import React from 'react';
 
-const AdminLayoutHeader = () => {
-  return (
-    <header className="bg-primary text-white">
-      <nav className="p-4 pr-6 flex items-center justify-between">
-        <Logo></Logo>
-        <NavMenu></NavMenu>
-        <div className="avatar-section flex items-center gap-6">
-          <Button size={'icon'} variant={'ghost'}>
-            <Bell></Bell>
-          </Button>
-          <div className="flex items-center gap-3">
-            <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-              <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-            <p>Nimesh Maharjan</p>
-          </div>
-        </div>
-      </nav>
-    </header>
-  );
-};
-
-export default AdminLayoutHeader;
-
-const NavMenu = () => {
+const AdminLayoutHeaderNav = () => {
   const customHeaderClassName =
-    'bg-primary cursor-pointer hover:bg-[#1D5073] hover:text-primary-foreground focus:bg-[#1D5073] focus:text-primary-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-[#1D5073] data-[state=open]:bg-[#1D5073]';
+    'bg-primary cursor-pointer hover:bg-primary-hover hover:text-primary-foreground focus:bg-primary-hover focus:text-primary-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-primary-hover data-[state=open]:bg-primary-hover';
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -146,6 +116,8 @@ const NavMenu = () => {
     </NavigationMenu>
   );
 };
+
+export default AdminLayoutHeaderNav;
 
 const ListItem = React.forwardRef<
   React.ElementRef<'a'>,

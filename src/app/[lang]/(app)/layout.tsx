@@ -1,6 +1,6 @@
 import AdminLayoutHeader from '@/modules/admin-module/layout/header';
 import { Sidebar } from '@/modules/admin-module/layout/sidebar';
-import { navList } from '@/modules/admin-module/layout/sidebar/nav';
+import { navList } from '@/modules/admin-module/layout/sidebar/sidebar-nav-list';
 import React, { ReactNode } from 'react';
 
 const AppLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
