@@ -18,12 +18,16 @@ function getLocale(request: NextRequest): string | undefined {
   return locale;
 }
 
+const PUBLIC_FILE = /\.(.*)$/;
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
-
+  //to take the files from the publisc folder
+  if (PUBLIC_FILE.test(request.nextUrl.pathname)) {
+    return;
+  }
   // Redirect if there is no locale
   if (pathnameIsMissingLocale) {
     const locale = getLocale(request);
@@ -48,5 +52,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   // Matcher ignoring `/_next/` and `/api/`
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  matcher: [
+    '/((?!api|_next/static|_next/public|_next/image|assets|favicon.ico|sw.js).*)',
+  ],
 };
