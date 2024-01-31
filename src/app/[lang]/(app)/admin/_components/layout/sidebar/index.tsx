@@ -4,16 +4,16 @@ import * as React from 'react';
 
 import { NavSearch } from './search';
 
-import { Icon } from '@/components/shared/icon';
-import { buttonVariants } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
+import { Icon } from '@/shared/components/icon';
+import { cn } from '@/shared/lib/utils';
+import { buttonVariants } from '@/shared/ui/button';
+import { Separator } from '@/shared/ui/separator';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components/ui/tooltip';
-import { cn } from '@/lib/utils';
+} from '@/shared/ui/tooltip';
 import { Navbar } from './sidebar-nav';
 import { navList, navListType } from './sidebar-nav-list';
 

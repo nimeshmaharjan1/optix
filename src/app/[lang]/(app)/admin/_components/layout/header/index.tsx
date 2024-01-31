@@ -1,7 +1,7 @@
 'use client';
-import Logo from '@/components/shared/logo';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
+import Logo from '@/shared/components/logo';
+import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui/avatar';
+import { Button } from '@/shared/ui/button';
 import { Bell } from 'lucide-react';
 import AdminLayoutHeaderNav from './header-nav';
 

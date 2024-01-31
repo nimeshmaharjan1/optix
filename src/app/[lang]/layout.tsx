@@ -1,5 +1,5 @@
 import '@/app/[lang]/globals.css';
-import { cn } from '@/lib/utils';
+import { cn } from '@/shared/lib/utils';
 import { Metadata } from 'next';
 import { Open_Sans as FontSans } from 'next/font/google';
 import { ReactNode } from 'react';

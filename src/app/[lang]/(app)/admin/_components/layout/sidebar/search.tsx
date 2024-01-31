@@ -1,12 +1,8 @@
 'use client';
 
-import { Icon } from '@/components/shared/icon';
-import { Input } from '@/components/ui/input';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
+import { Icon } from '@/shared/components/icon';
+import { Input } from '@/shared/ui/input';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/shared/ui/tooltip';
 
 export const NavSearch = ({
   isCollapsed,

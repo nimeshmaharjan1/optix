@@ -1,5 +1,5 @@
-import { AuthBackgroundImage } from '@/modules/auth-module/background-image';
-import { AuthContainer } from '@/modules/auth-module/layout/auth-container';
+import { AuthContainer } from '@/app/[lang]/(auth)/_components/auth-container';
+import { AuthBackgroundImage } from '@/app/[lang]/(auth)/_components/background-image';
 import { ReactNode } from 'react';
 
 const AuthLayout: React.FC<{ children: ReactNode }> = ({ children }) => {

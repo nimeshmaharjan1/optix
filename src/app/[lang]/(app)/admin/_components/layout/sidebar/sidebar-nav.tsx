@@ -2,14 +2,10 @@
 
 'use client';
 
-import { Icon } from '@/components/shared/icon';
-import { buttonVariants } from '@/components/ui/button';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
-import { cn } from '@/lib/utils';
+import { Icon } from '@/shared/components/icon';
+import { cn } from '@/shared/lib/utils';
+import { buttonVariants } from '@/shared/ui/button';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/shared/ui/tooltip';
 
 import * as icons from 'lucide-react';
 import Link from 'next/link';

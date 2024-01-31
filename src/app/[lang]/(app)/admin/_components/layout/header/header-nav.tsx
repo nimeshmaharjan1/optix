@@ -1,3 +1,4 @@
+import { cn } from '@/shared/lib/utils';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -6,8 +7,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
-import { cn } from '@/lib/utils';
+} from '@/shared/ui/navigation-menu';
 import React from 'react';
 
 const AdminLayoutHeaderNav = () => {

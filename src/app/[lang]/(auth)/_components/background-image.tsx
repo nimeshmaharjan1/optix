@@ -1,4 +1,4 @@
-import Overlay from '@/components/shared/overlay';
+import Overlay from '@/shared/components/overlay';
 import Image from 'next/image';
 
 export const AuthBackgroundImage = () => (
